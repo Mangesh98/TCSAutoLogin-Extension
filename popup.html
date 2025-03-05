@@ -1,0 +1,188 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCS Login Autofill</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+    h4 {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+    button {
+      background-color: #1e88e5;
+      border: none;
+      color: #fff;
+      padding: 12px 20px;
+      margin: 10px 0;
+      border-radius: 4px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    input {
+      background-color: #424242;
+      border: 1px solid #616161;
+      border-radius: 4px;
+      color: #fff;
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      font-size: 16px;
+    }
+    hr {
+      border: 1px solid #616161;
+      margin: 20px 0;
+    }
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      button, input {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button id="autofillButton">AutoFill Login</button>
+  <hr/>
+  <h4>OTP Section</h4>
+  <input type="text" id="TcsExtensionOtp" placeholder="Enter OTP">
+  <button id="fillOtpButton">Fill OTP</button>
+  <script src="popup.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCS Login Autofill</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: #ffffff;
+        font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-width: 300px;
+        max-width: 400px;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .section {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+      }
+      h4 {
+        color: #e0e0e0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 600;
+      }
+      button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+      button:hover {
+        background-color: #45a049;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      input {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 6px;
+        color: white;
+        padding: 12px 15px;
+        width: 100%;
+        font-size: 16px;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+      input:focus {
+        border-color: #4caf50;
+        box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+      }
+      input::placeholder {
+        color: rgba(255, 255, 255, 0.5); 
+        opacity: 1; 
+      }
+      hr {
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        /* margin: 0px 0; */
+      }
+      @media (max-width: 480px) {
+        body {
+          padding: 15px;
+          min-width: 250px;
+        }
+        button,
+        input {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="section">
+        <button id="autofillButton">AutoFill Login</button>
+      </div>
+
+      <hr />
+
+      <div class="section">
+        <h4>OTP Section</h4>
+        <input
+          type="text"
+          id="TcsExtensionOtp"
+          placeholder="Enter OTP"
+          maxlength="6"
+        />
+        <button id="fillOtpButton" style="margin-top: 10px">Fill OTP</button>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

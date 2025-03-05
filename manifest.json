@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "TCS Login Autofill",
+    "version": "1.0",
+    "description": "Auto-fills login email, captcha and OTP for https://nextstep.tcs.com/campus/#/.",
+    "permissions": ["scripting", "activeTab"],
+    "host_permissions": ["https://nextstep.tcs.com/*"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://nextstep.tcs.com/campus/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
