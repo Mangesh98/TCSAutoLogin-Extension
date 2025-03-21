@@ -10,7 +10,7 @@ document.getElementById("autofillButton").addEventListener("click", () => {
   // Handler for the Fill OTP button
   document.getElementById("fillOtpButton").addEventListener("click", () => {
     const otp = document.getElementById("TcsExtensionOtp").value;
-    console.log("OTP entered:", otp);
+    // console.log("OTP entered:", otp);
     
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, { type: "fillOTP", otp: otp }, (response) => {
